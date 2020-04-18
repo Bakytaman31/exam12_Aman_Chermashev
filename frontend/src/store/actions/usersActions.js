@@ -70,11 +70,3 @@ export const logoutUser = () => {
         dispatch(push('/'));
     }
 };
-
-export const editProfile = profileData => {
-    return async dispatch => {
-        const response = await axiosApi.patch('/users/profile', profileData);
-        dispatch(loginUserSuccess(response.data));
-        dispatch(push('/'));
-    }
-};

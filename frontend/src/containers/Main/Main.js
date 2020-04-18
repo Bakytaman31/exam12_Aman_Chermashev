@@ -18,13 +18,6 @@ class Main extends Component {
                         <Grid container direction="column" spacing={10}>
                             {this.props.pictures.map(picture => (
                                 <Grid item xs key={picture._id}>
-                                    {/*<a href={apiURL + '/' + picture.image}>*/}
-                                    {/*    <img*/}
-                                    {/*        src={apiURL + '/' + picture.image}*/}
-                                    {/*        alt={picture.title}*/}
-                                    {/*        style={{height: '100px', width: '100px'}}*/}
-                                    {/*    />*/}
-                                    {/*</a>*/}
                                     <MediaCard
                                         image={apiURL + '/' + picture.image}
                                         title={picture.title}

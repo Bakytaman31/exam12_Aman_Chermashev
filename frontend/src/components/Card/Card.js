@@ -80,7 +80,8 @@ export default function MediaCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                {(props.userId === props.authorId) && <Button size="small" color="secondary" onClick={() => props.delete(props.id)}>
+                {(props.userId === props.authorId) &&
+                <Button size="small" color="secondary" onClick={() => props.delete(props.id, props.authorId)}>
                     Delete
                 </Button>}
             </CardActions>

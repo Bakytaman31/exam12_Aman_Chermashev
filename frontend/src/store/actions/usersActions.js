@@ -1,6 +1,6 @@
 import axiosApi from "../../axiosApi";
 import {push} from 'connected-react-router';
-import { toast } from 'react-toastify';
+import {toast} from 'react-toastify';
 
 export const REGISTER_USER_REQUEST = 'REGISTER_USER_REQUEST';
 export const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS';

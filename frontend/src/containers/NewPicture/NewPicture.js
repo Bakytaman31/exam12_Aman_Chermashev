@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import FormElement from "../../components/UI/Form/FormElement";
 import Button from "@material-ui/core/Button";
+import Alert from "@material-ui/lab/Alert/Alert";
 
 class NewPicture extends Component {
     state = {
@@ -35,6 +36,11 @@ class NewPicture extends Component {
     render() {
         return (
             <form onSubmit={this.submitFormHandler}>
+                {this.props.error && (
+                    <Grid item xs>
+                        <Alert severity="error">{this.props.error}</Alert>
+                    </Grid>
+                )}
                 <Grid container direction="column" spacing={2}>
                     <Grid item xs>
                         <FormElement
@@ -62,8 +68,12 @@ class NewPicture extends Component {
     }
 }
 
+const mapStateToProps = state => ({
+    error: state.pictures.error
+});
+
 const mapDispatchToProps = dispatch => ({
     postPicture: picture => dispatch(postPicture(picture))
 });
 
-export default connect(null, mapDispatchToProps)(NewPicture);
+export default connect(mapStateToProps, mapDispatchToProps)(NewPicture);

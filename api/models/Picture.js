@@ -15,6 +15,10 @@ const PictureSchema = new Schema({
         type: Schema.Types.ObjectId,
         req: true,
         ref: 'User'
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
 });
 

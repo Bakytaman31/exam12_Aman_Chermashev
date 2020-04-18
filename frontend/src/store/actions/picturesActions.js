@@ -1,6 +1,6 @@
 import axiosApi from "../../axiosApi";
 import {push} from 'connected-react-router';
-import { toast } from 'react-toastify';
+import {toast} from 'react-toastify';
 
 
 export const GET_PICTURES_SUCCESS = 'GET_PICTURES_SUCCESS';
@@ -46,4 +46,14 @@ export const postPicture = picture => {
 };
 
 
-//delete
+export const deletePicture = (id, authId) => {
+    return async dispatch => {
+        try {
+            await axiosApi.delete(`/pictures/${id}`);
+            dispatch(getUsersPictures(authId));
+            toast.success("Picture deleted success");
+        } catch (e) {
+
+        }
+    }
+};

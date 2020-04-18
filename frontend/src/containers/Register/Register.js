@@ -34,48 +34,46 @@ class Register extends Component {
 
     render() {
         return (
-            <>
-                <Grid container justify="center">
-                    <Grid item xs={12} md={10} lg={4}>
-                        <Box pt={2} pb={2}>
-                            <Typography variant="h4">Register</Typography>
-                        </Box>
+            <Grid container justify="center">
+                <Grid item xs={12} md={10} lg={4}>
+                    <Box pt={2} pb={2}>
+                        <Typography variant="h4">Register</Typography>
+                    </Box>
 
-                        <form onSubmit={this.submitFormHandler}>
-                            <Grid container direction="column" spacing={2}>
-                                <Grid item xs>
-                                    <FormElement
-                                        propertyName="username"
-                                        title="Username"
-                                        value={this.state.username}
-                                        onChange={this.inputChangeHandler}
-                                        error={this.getFieldError('username')}
-                                        placeholder="Enter username"
-                                        autoComplete="new-username"
-                                    />
-                                </Grid>
-                                <Grid item xs>
-                                    <FormElement
-                                        propertyName="password"
-                                        title="Password"
-                                        type="password"
-                                        value={this.state.password}
-                                        onChange={this.inputChangeHandler}
-                                        error={this.getFieldError('password')}
-                                        placeholder="Enter password"
-                                        autoComplete="new-password"
-                                    />
-                                </Grid>
-                                <Grid item xs>
-                                    <Button type="submit" color="primary" variant="contained">
-                                        Register
-                                    </Button>
-                                </Grid>
+                    <form onSubmit={this.submitFormHandler}>
+                        <Grid container direction="column" spacing={2}>
+                            <Grid item xs>
+                                <FormElement
+                                    propertyName="username"
+                                    title="Username"
+                                    value={this.state.username}
+                                    onChange={this.inputChangeHandler}
+                                    error={this.getFieldError('username')}
+                                    placeholder="Enter username"
+                                    autoComplete="new-username"
+                                />
                             </Grid>
-                        </form>
-                    </Grid>
+                            <Grid item xs>
+                                <FormElement
+                                    propertyName="password"
+                                    title="Password"
+                                    type="password"
+                                    value={this.state.password}
+                                    onChange={this.inputChangeHandler}
+                                    error={this.getFieldError('password')}
+                                    placeholder="Enter password"
+                                    autoComplete="new-password"
+                                />
+                            </Grid>
+                            <Grid item xs>
+                                <Button type="submit" color="primary" variant="contained">
+                                    Register
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </form>
                 </Grid>
-            </>
+            </Grid>
         );
     }
 }

@@ -32,7 +32,7 @@ const UserMenu = ({user, logout}) => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <ListItem disabled>Hello, {user.displayName}!</ListItem>
+                <ListItem disabled>Hello, {user.displayName || user.username}!</ListItem>
                 <Divider/>
                 <MenuItem onClick={handleClose} component={Link} to={`/usersPictures/${user._id}`}>My pictures</MenuItem>
                 <MenuItem onClick={logout}>Logout</MenuItem>

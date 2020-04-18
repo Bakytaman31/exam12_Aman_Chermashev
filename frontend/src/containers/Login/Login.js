@@ -40,7 +40,7 @@ class Login extends Component {
                         <form onSubmit={this.submitFormHandler}>
                             <Grid container direction="column" spacing={2}>
                                 <Grid item xs>
-                                    <FacebookLogin/>
+                                    <FacebookLogin content="Login with Facebook"/>
                                 </Grid>
                                 <Grid item xs>
                                     <Divider/>

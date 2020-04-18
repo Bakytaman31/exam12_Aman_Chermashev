@@ -44,7 +44,7 @@ const AppToolbar = () => {
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
-                        <Link to="/" className={classes.mainLink}>Cocktails</Link>
+                        <Link to="/" className={classes.mainLink}>Gallery</Link>
                     </Typography>
                     {user ? <UserMenu user={user} logout={() => dispatch(logoutUser())}/> : <AnonymousMenu/>}
                 </Toolbar>

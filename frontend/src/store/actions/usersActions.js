@@ -55,8 +55,6 @@ export const loginUser = userData => {
 export const loginWithFacebook = facebookData => {
     return async dispatch => {
         const response = await axiosApi.post('/users/facebook', facebookData);
-
-        console.log('here');
         toast.success('Logged in with Facebook');
         dispatch(loginUserSuccess(response.data));
         dispatch(push('/'));
